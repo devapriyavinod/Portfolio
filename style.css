@@ -112,12 +112,17 @@ HERO
 .hero{
 
     display:flex;
-    justify-content:space-between;
+
     align-items:center;
+
+    justify-content:space-between;
+
+    gap:80px;
+
     min-height:100vh;
-    gap:60px;
 
 }
+
 
 .hero-text{
 
@@ -193,14 +198,19 @@ HERO
 
 .hero-image img{
 
-    width:350px;
-    height:350px;
+    width:460px;
+    height:520px;
+
     object-fit:cover;
-    border-radius:50%;
-    border:8px solid #8b6b4f;
-    box-shadow:0 0 40px rgba(56,189,248,.4);
+
+    border-radius:18px;
+
+    border:none;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
 
 }
+
 
 /* ===========================
 ABOUT
@@ -340,7 +350,23 @@ CONTACT
     color:#8b6b4f;
 
 }
+/* ==========================
+INTERNSHIP IMAGE
+========================== */
 
+.internship-img{
+
+    width:100%;
+    max-width:350px;
+    display:block;
+
+    margin:0 auto 25px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
 /* ===========================
 FOOTER
 =========================== */
@@ -444,7 +470,76 @@ section{
 
 }
 
+/* Internship Mobile */
+
+.internship-card{
+
+    flex-direction:column;
+
+    text-align:center;
+
 }
+
+.internship-left img{
+
+    margin:auto;
+
+}
+/* Internship Mobile */
+
+.internship-card{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.internship-left img{
+
+    margin:auto;
+
+}
+
+
+/* Publication Mobile */
+
+.publication{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.publication-image img{
+
+width:100%;
+
+max-width:380px;
+
+height:auto;
+
+margin:auto;
+
+}
+
+.publication-content{
+
+    text-align:center;
+
+}
+
+.publication-content p{
+
+    text-align:left;
+
+}
+
+}   /* <- THIS is the final brace of @media */
+  /* Leave this closing brace here */
+
+
 html{
 scroll-behavior:smooth;
 }
@@ -816,5 +911,180 @@ border-radius:15px;
 
     background:#5c4331;
     transform:translateY(-5px);
+
+}
+/*==============================
+IBM Internship
+==============================*/
+
+.internship-card{
+
+display:flex;
+
+align-items:center;
+
+gap:40px;
+
+background:white;
+
+padding:35px;
+
+border-radius:20px;
+
+box-shadow:0 10px 35px rgba(0,0,0,.08);
+
+margin:40px auto;
+
+max-width:1100px;
+
+}
+
+.internship-left{
+
+flex:1;
+
+}
+
+.internship-left img{
+
+width:100%;
+
+max-width:320px;
+
+border-radius:15px;
+
+display:block;
+
+}
+
+.internship-right{
+
+flex:2;
+
+}
+
+.internship-right h3{
+
+font-size:30px;
+
+color:#8b6b4f;
+
+margin-bottom:10px;
+
+}
+
+.internship-right h4{
+
+font-size:22px;
+
+margin-bottom:10px;
+
+color:#444;
+
+}
+
+.internship-right span{
+
+display:inline-block;
+
+background:#f4ede7;
+
+padding:8px 18px;
+
+border-radius:30px;
+
+font-weight:600;
+
+margin-bottom:20px;
+
+color:#8b6b4f;
+
+}
+
+.internship-right p{
+
+font-size:17px;
+
+line-height:1.8;
+
+color:#555;
+
+text-align:justify;
+
+}
+/* ===========================
+PUBLICATION NEW DESIGN
+=========================== */
+
+
+
+.publication{
+
+    display:flex;
+    align-items:flex-start;
+    gap:40px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:18px;
+
+    margin:35px auto;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+
+.publication-image{
+
+    flex:0 0 220px;
+
+}
+
+.publication-image img{
+
+    width:220px;
+    height:160px;
+
+    object-fit:cover;
+    border-radius:12px;
+
+
+
+    display:block;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+
+.publication-content{
+    flex:3;
+}
+
+.publication-content h3{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    line-height:1.35;
+
+    margin-bottom:18px;
+
+    color:#8b6b4f;
+
+}
+
+.publication-content p{
+
+font-size:19px;
+
+line-height:1.9;
+
+color:#555;
+
+text-align:justify;
 
 }
