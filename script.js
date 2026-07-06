@@ -1,30 +1,9 @@
-// Smooth appearance animation
+const menuToggle = document.getElementById("menu-toggle");
 
-const sections = document.querySelectorAll("section");
+const navLinks = document.getElementById("nav-links");
 
-const observer = new IntersectionObserver((entries)=>{
+menuToggle.addEventListener("click", () => {
 
-entries.forEach((entry)=>{
-
-if(entry.isIntersecting){
-
-entry.target.style.opacity="1";
-entry.target.style.transform="translateY(0)";
-
-}
-
-});
-
-},{threshold:0.2});
-
-sections.forEach((section)=>{
-
-section.style.opacity="0";
-
-section.style.transform="translateY(50px)";
-
-section.style.transition="all 0.8s ease";
-
-observer.observe(section);
+    navLinks.classList.toggle("active");
 
 });

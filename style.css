@@ -421,122 +421,91 @@ SCROLLBAR
 RESPONSIVE
 =========================== */
 
-@media(max-width:900px){
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media screen and (max-width:768px){
+
+header{
+    position:relative;
+}
 
 nav{
-
     flex-direction:column;
-
+    padding:20px;
 }
 
 nav ul{
-
+    display:flex;
     flex-wrap:wrap;
     justify-content:center;
+    gap:18px;
     margin-top:20px;
-
 }
 
 nav ul li{
-
-    margin:10px;
-
+    margin:0;
 }
 
 .hero{
-
+    display:flex;
     flex-direction:column-reverse;
+    gap:40px;
     text-align:center;
-    padding-top:120px;
+    padding-top:40px;
+}
 
+.hero-text{
+    width:100%;
 }
 
 .hero-text h1{
-
     font-size:42px;
+}
 
+.hero-text h2{
+    font-size:28px;
+}
+
+.hero-text p{
+    font-size:17px;
 }
 
 .hero-image img{
-
-    width:250px;
-    height:250px;
-
+    width:280px;
+    height:340px;
 }
 
-section{
-
-    padding:70px 7%;
-
+.buttons{
+    justify-content:center;
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
 }
-
-/* Internship Mobile */
 
 .internship-card{
-
     flex-direction:column;
-
-    text-align:center;
-
 }
-
-.internship-left img{
-
-    margin:auto;
-
-}
-/* Internship Mobile */
-
-.internship-card{
-
-    flex-direction:column;
-
-    text-align:center;
-
-}
-
-.internship-left img{
-
-    margin:auto;
-
-}
-
-
-/* Publication Mobile */
 
 .publication{
-
-    flex-direction:column;
-
-    text-align:center;
-
+    flex-direction:column !important;
 }
 
 .publication-image img{
-
-width:100%;
-
-max-width:380px;
-
-height:auto;
-
-margin:auto;
-
+    width:100%;
+    max-width:320px;
+    height:auto;
+    margin:auto;
 }
 
-.publication-content{
-
-    text-align:center;
-
+.gallery{
+    grid-template-columns:1fr;
 }
 
-.publication-content p{
-
-    text-align:left;
-
+.gallery-card img{
+    width:100%;
 }
 
-}   /* <- THIS is the final brace of @media */
+} /* <- THIS is the final brace of @media */
   /* Leave this closing brace here */
 
 
@@ -1086,5 +1055,80 @@ line-height:1.9;
 color:#555;
 
 text-align:justify;
+
+}
+/* ===========================
+   HAMBURGER MENU
+=========================== */
+
+.menu-toggle{
+
+    display:none;
+
+    font-size:32px;
+
+    cursor:pointer;
+
+    color:#8b6b4f;
+
+}
+
+/* Mobile */
+
+@media screen and (max-width:768px){
+
+    .menu-toggle{
+
+        display:block;
+
+    }
+
+    nav{
+
+        display:flex;
+
+        justify-content:space-between;
+
+        align-items:center;
+
+        position:relative;
+
+    }
+
+    #nav-links{
+
+        display:none;
+
+        flex-direction:column;
+
+        width:100%;
+
+        background:white;
+
+        position:absolute;
+
+        top:75px;
+
+        left:0;
+
+        padding:20px 0;
+
+        box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    }
+
+    #nav-links.active{
+
+        display:flex;
+
+    }
+
+    #nav-links li{
+
+        margin:15px 0;
+
+        text-align:center;
+
+    }
 
 }
